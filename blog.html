@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="rounded h-full">
+        <header class=" text-xl font-bold mb-8">Blog Questions</header>
+        <a class="nav-link font-semibold" href="#Variables">1.  Variables</a>  <br>
+        <a class="nav-link font-semibold" href="#null-undefined">2. Use case of Null and Undefined</a> <br>
+        <a class="nav-link font-semibold" href="#Rest-API">3. Definition of REST API</a>
+      </nav>
+
+      <main class=" ml-60">
+        <section id="Variables">
+            <h1 class="text-3xl font-bold text-center m-10"> Different types of variables</h1>
+        <p class="text-xl mb-8"> Javascript is a dynamically typed variable; we don't need to declare the type of the variable during its declaration. Javascript uses some keywords to declare a variable, such as <strong>Var, let, and const</strong>.Variables declared using var, let, and const have quite different scopes in JavaScript. It is very necessary to understand these scope rules, Let's discuss these scope rules and functions:</p>
+
+       <div class="w-9/12 mx-auto">
+        <p> <strong>Var:</strong>The JavaScript keyword var is used to declare variables that are function scoped. All of the JavaScript keywords were declared using the only "var" keyword prior to the introduction of ES6. </p> <br>
+        <ul>
+            <li>Function Scope: variable declared with Var is function scoped means it will be available only inside the function  if it's declared within the function. it it's declared outside of function means global declaration. it will be available throughout the script in this case. </li><br>
+            <li>Hoisting: All the variables declared with Var will be hoisted at the top of the containing function or global scope. Most important thing is only the declaration will be hoisted at the top not the values of that variable.
+            </li>
+        </ul>
+       </div>
+       <div class="w-9/12 mx-auto mt-8">
+        <p> <strong>Let:</strong> The let Keyword was introduced in Es6. it is re-assignable, block scoped variable. we can re-assign the value of the variable declared with let </p> <br>
+        <ul>
+            <li>Block Scope: Block scoped variable means it is accessible with the declared block area only. The block defines with the second bracket that we use for declaring any function or loop or any conditions.  </li><br>
+            <li>Hoisting: accessing the let variable without declaring it will result ReferenceError.
+            </li>
+        </ul>
+       </div>
+       <div class="w-9/12 mx-auto mt-8">
+        <p> <strong>const:</strong>The const keywords were added to JavaScript in 2015. we cannot re-assign the variable declared with const key word </p> <br>
+        <ul>
+            <li>Block Scope: it is also block scoped like let variable. it is not re-assignable variable but it doesn't mean that the value is immutable. value is mutable but we can to re-assign any value to the variable declared with const.  </li><br>
+            <li>Hoisting: It is the same as let keyword.
+            </li>
+        </ul>
+       </div>
+
+        </section>
+        <section id="null-undefined">
+            <h1 class="text-3xl font-bold text-center m-10"> Use case of Null and Undefined</h1>
+
+            <p>There are six types of primitive Variables available in javascript. Such as Number, String, Boolean, NULL, Undefined and NaN.so  NULL and Undefined also a type of primitive variable. let see some use case of null and undefined: </p>
+
+            <h1 class="text-xl font-bold my-4">use case of null</h1>
+            <ul>
+                <li>Absence of a value: Null indicates the absence of value of an object or variable.</li>
+                <li>Clearing Values: NULL is also used to clear or reset the value of variables or properties. it helps to free up the memory by removing Reference of object.  </li>
+            </ul>
+            <h1 class="text-xl font-bold my-8">use case of Undefined</h1>
+            <ul>
+                <li>Default Values: undefined is used as default value of function parameters</li>
+                <li>Properties and Variables Not Yet Defined: Accessing the properties or variables which is not declared yet will give undefined result.</li>
+                <li> No return statement: when a function does not have return statement. calling of that function will return undefined.</li>
+                <li> searching wrong array element: when accessing an element of an array that doesn't exist, it will give undefined result</li>
+
+            </ul>
+
+
+        </section>
+        <section id="Rest-API">
+            <h1 class="text-3xl font-bold text-center m-10"> Definition of REST API</h1>
+
+            <p class="mb-8">REST APIs are widely used for building web services that enable different software systems to communicate over the internet. They are popular for their simplicity, scalability, and ease of integration, making them a fundamental part of modern web development and the foundation for many web-based applications and services. REST API stands for Representational State Transfer Application Programming Interface, is a type of web service that follows the principles and constraints of REST architectural style. It is a set of rules and conventions for designing and interacting with web-based services using HTTP (Hypertext Transfer Protocol).Here's a breakdown of what that means:</p>
+
+            <ul>
+                <li><strong>1. Rules and Conventions: </strong>REST APIs have a specific way of doing things. They use a common language and a set of rules that both the program making requests (like a mobile app) and the program providing information (like a server) understand.</li><br>
+                <li><strong>2. Communication:</strong>Just like you communicate your food order to a waiter, software programs communicate with each other using HTTP, which is the same protocol your web browser uses to load web pages.
+                </li><br>
+                <li> <strong>3.Resources:</strong>REST APIs deal with resources, which can be thought of as pieces of data. These resources have unique addresses (like web page URLs) that programs can use to find and interact with them.</li><br>
+                <li><strong>4. Operations: </strong>You can think of REST API operations like actions you can perform on the resources. For example, you can ask for information about a resource (like asking for the menu in a restaurant), create new resources (like placing an order), update existing resources (like customizing your meal), or delete them (like canceling an order).
+                </li><br>
+                <li><strong>5. Stateless: </strong>REST APIs don't remember anything about you once they've served your request. Each time you make a request, you need to include all the information the API needs to understand and fulfill that request.</li>
+            </ul>
+
+
+        </section>
+      </main>
+    
+</body>
+</html>
